@@ -8,3 +8,5 @@ node_modules/
 /playwright/.auth/
 /playwright
 .vscode/
+.env
+/test-results.json

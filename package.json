@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --workers=1 --reporter=html --output=playwright/test-results --project=chromium"
+    "test": " npx playwright test --workers=1 --project=chromium && npm run notify-teams",
+    "notify-teams": "node utils/webhook.mjs"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.0"
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "dotenv": "^17.4.2"
   }
 }
