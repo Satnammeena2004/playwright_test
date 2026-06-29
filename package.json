@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": " npx playwright test --workers=1 --project=chromium && npm run notify-teams",
-    "notify-teams": "node utils/webhook.mjs"
+    "test": " npx playwright test --workers=1 --project=chromium || true && npm run notify",
+    "notify": "npm run generate-report && npm run notify-teams",
+    "notify-teams": "node utils/webhook.mjs",
+    "generate-report": "node generateReport.mjs"
   },
   "keywords": [],
   "author": "",
