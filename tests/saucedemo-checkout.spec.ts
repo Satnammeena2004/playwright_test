@@ -195,7 +195,7 @@ test.describe("SauceDemo checkout flow", () => {
       await page.locator(".shopping_cart_link").click();
 
       await expect(page).toHaveURL(/cart\.html/);
-      await expect(page.getByText("Your Cartttt", { exact: true })).toBeVisible();
+      await expect(page.getByText("Your Cart", { exact: true })).toBeVisible();
       await expect(page.locator(".cart_item")).toHaveCount(1);
       await expect(page.getByText(firstProductName)).toBeVisible();
     });
