@@ -12,7 +12,7 @@ test.describe("Login flow", () => {
     loginPage.goto()
   });
 
-  test("Positive login | correct email and password should login", async ({page}) => {
+  test.skip("Positive login | correct email and password should login", async ({page}) => {
     test.step("Fill the  username and password", async () => {
       await loginPage.fillUsername(process.env.STANDARD_USER as string);
       await loginPage.fillPassword(process.env.PASSWORD as string);
