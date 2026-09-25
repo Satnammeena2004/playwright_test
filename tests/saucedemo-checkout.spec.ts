@@ -1,8 +1,9 @@
 // spec: tests/saucedemo-checkout.spec.ts
 // seed: tests/seed.spec.ts
 
-import { test, expect } from "@playwright/test";
-test.use({ storageState: "playwright/.auth/user.json" });
+import { test, expect } from "@/fixtures/login.fixture";
+// test.use({ storageState: "playwright/.auth/user.json" });
+test.use({ authRole: "VISUAL_USER" });
 test.describe("SauceDemo checkout flow", () => {
   test("logs in, adds the first two products to the cart, and completes checkout", async ({
     page,
@@ -153,7 +154,7 @@ test.describe("SauceDemo checkout flow", () => {
       ).toBeVisible();
     });
   });
-test("logs in, sorts items low to high, adds the first item, and completes purchase", async ({
+  test("logs in, sorts items low to high, adds the first item, and completes purchase", async ({
     page,
   }) => {
     let firstProductName = "";
@@ -230,5 +231,4 @@ test("logs in, sorts items low to high, adds the first item, and completes purch
       ).toBeVisible();
     });
   });
-
 });

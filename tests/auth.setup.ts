@@ -10,4 +10,4 @@ test('authenticate SauceDemo', async ({ page }) => {
   await expect(page.locator('.title')).toHaveText('Products');
 
   await page.context().storageState({ path: 'playwright/.auth/user.json' });
-});
+},);
