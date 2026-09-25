@@ -1,0 +1,1 @@
+export const PAGE_LOGO_TEXT="Swag Labs";

@@ -153,7 +153,7 @@ test.describe("SauceDemo checkout flow", () => {
       ).toBeVisible();
     });
   });
-  test("logs in, sorts items low to high, adds the first item, and completes purchase", async ({
+test("logs in, sorts items low to high, adds the first item, and completes purchase", async ({
     page,
   }) => {
     let firstProductName = "";
